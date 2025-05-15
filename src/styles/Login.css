@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.login-header .logo {
+  height: 60px;
+}
+
+.login-header h2 {
+  color: #777;
+  margin-right: 40px;
+  align-self: center;
+}
+
+.login-box {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.login-box h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.login-box label {
+  margin-top: 10px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #000;
+}
+
+.checkbox-area {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.checkbox-area input {
+  margin-right: 5px;
+}
+
+.login-box button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #2a9d3b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: blue;
+  font-size: 14px;
+  text-decoration: none;
+  font-style: italic;
+}
