@@ -1,8 +1,12 @@
-import Login from './components/Login';
-import './styles/Login.css';
+import FormularioChamado from './components/FormularioChamado';
+
 
 function App() {
-  return <Login />;
+  return (
+    <div>
+      <FormularioChamado />
+    </div>
+  );
 }
 
 export default App;

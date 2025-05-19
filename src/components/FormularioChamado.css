@@ -1,0 +1,67 @@
+.form-container {
+  border: 15px solid #d9d9d9;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.info-text {
+  font-style: italic;
+  color: gray;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.chamado-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.chamado-form input[type="text"],
+.chamado-form select,
+.chamado-form textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 20px;
+}
+
+.inline-fields label {
+  flex: 1;
+}
+
+.file-label input {
+  display: block;
+  margin-top: 5px;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #4c4c4c;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
