@@ -1,10 +1,11 @@
-import FormularioChamado from './components/FormularioChamado';
+import ChamadosTecnico from './components/ChamadosTecnico';
+//import FormularioChamado from './components/FormularioChamado';
 
 
 function App() {
   return (
     <div>
-      <FormularioChamado />
+      <ChamadosTecnico />
     </div>
   );
 }

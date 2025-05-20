@@ -1,0 +1,118 @@
+.tecnico-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+.tecnico-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.foto-perfil {
+  width: 32px;
+  height: 32px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+.barra-busca {
+  width: 100%;
+  padding: 8px;
+  margin: 20px 0;
+}
+
+.botoes-categorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.botoes-categorias button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-atribuidos {
+  background-color: #2d2aa7;
+}
+
+.btn-respondidos {
+  background-color: #2ecc71;
+}
+
+.btn-espera {
+  background-color: #e74c3c;
+}
+
+.btn-solucionados {
+  background-color: #7f8c8d;
+}
+
+.cards-chamados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-chamado {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.prioridade {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.prioridade-urgente {
+  color: red;
+}
+
+.prioridade-médio {
+  color: green;
+}
+
+.prioridade-alto {
+  color: orange;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.perfil-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.estrela {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.estrela-green { color: green; }
+.estrela-blue { color: blue; }
+.estrela-red { color: red; }
+.estrela-gray { color: gray; }
