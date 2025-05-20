@@ -1,4 +1,5 @@
-import AlterarSenha from "./components/AlterarSenha";
+import RespostaChamado from './components/RespostaChamado';
+//import AlterarSenha from "./components/AlterarSenha";
 //import ChamadosTecnico from './components/ChamadosTecnico';
 //import FormularioChamado from './components/FormularioChamado';
 
@@ -6,7 +7,7 @@ import AlterarSenha from "./components/AlterarSenha";
 function App() {
   return (
     <div>
-      <AlterarSenha />
+      <RespostaChamado />
     </div>
   );
 }

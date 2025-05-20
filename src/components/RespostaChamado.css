@@ -1,0 +1,87 @@
+.resposta-container {
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.formulario-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario-icone {
+  font-size: 24px;
+}
+
+.usuario {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  border-radius: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.salvar {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelar {
+  background-color: #bdbdbd;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.salvar:hover {
+  background-color: #1b5e20;
+}
+
+.cancelar:hover {
+  background-color: #9e9e9e;
+}
