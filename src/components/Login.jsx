@@ -1,6 +1,27 @@
 import '../styles/Login.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../services/Api';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
+  
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await login({ email, senha });
+      if (res.status === 200) {
+        // Você pode salvar o token, se necessário
+        localStorage.setItem('token', res.data.token);
+        navigate('/chamados');
+      }
+    } catch (err) {
+      alert('Erro ao fazer login');
+    }
+  };
+  
   return (
     <div className="login-container">
       <header className="login-header">
