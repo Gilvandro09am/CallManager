@@ -13,7 +13,7 @@ import FormularioChamado from './components/FormularioChamado';
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/avaliar-chamado" element={<AvaliacaoChamado />} />
-        <Route path="/chamados" element={<ChamadosTecnico />} />
+        <Route path="/chamados" element={<ChamadosTecnico/>} />
         <Route path="/resposta-chamado" element={<RespostaChamado />} />
         <Route path="/formulario-chamado" element={<FormularioChamado />} />
         <Route path="/alterar-senha" element={<AlterarSenha />} />

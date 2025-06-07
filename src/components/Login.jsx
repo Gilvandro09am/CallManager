@@ -32,20 +32,11 @@ function Login() {
       <div className="login-box">
         <h3>🔒 Login UEPB</h3>
 
-        <form>
-          <label htmlFor="username">Usuário:</label>
-          <input type="text" id="username" name="username" />
-
-          <label htmlFor="password">Senha:</label>
-          <input type="password" id="password" name="password" />
-
-          <div className="checkbox-area">
-            <input type="checkbox" id="remember" />
-            <label htmlFor="remember">Relembre-me</label>
-          </div>
-
-          <button type="submit">Acessar</button>
-        </form>
+         <form onSubmit={handleLogin}>
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+          <input type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
+          <button type="submit">Entrar</button>
+         </form>
 
         <a href="/" className="forgot-password">Esqueci minha Senha</a>
       </div>
