@@ -5,13 +5,13 @@ import { login } from '../services/Api';
 
 function Login() {
   const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
   
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await login({ email, senha });
+      const res = await login({ email, password });
       if (res.status === 200) {
         // Você pode salvar o token, se necessário
         localStorage.setItem('token', res.data.token);
@@ -34,7 +34,7 @@ function Login() {
 
          <form onSubmit={handleLogin}>
           <input type="email" value={email} onChange={e => setEmail(e.target.value)}/>
-          <input type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
           <button type="submit">Entrar</button>
          </form>
 
