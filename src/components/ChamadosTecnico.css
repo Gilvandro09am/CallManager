@@ -1,108 +1,144 @@
-
-.logo {
-  height: 60px;
-}
-
-.tecnico-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.foto-perfil {
-  width: 32px;
-  height: 32px;
-  background-color: #bbb;
-  border-radius: 50%;
+/* ChamadosTecnico.css */
+.tecnico-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .barra-busca {
-  width: 40%;
-  padding: 8px;
-  margin: 20px 0;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 2rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .botoes-categorias {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .botoes-categorias button {
-  padding: 10px;
-  color: white;
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botoes-categorias button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-atribuidos {
-  background-color: #2d2aa7;
+  background: #ff6b6b;
+  color: white;
 }
 
 .btn-respondidos {
-  background-color: #2ecc71;
+  background: #48dbfb;
+  color: white;
 }
 
 .btn-espera {
-  background-color: #e74c3c;
+  background: #feca57;
+  color: white;
 }
 
 .btn-solucionados {
-  background-color: #7f8c8d;
+  background: #1dd1a1;
+  color: white;
 }
 
 .cards-chamados {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .card-chamado {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-chamado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .prioridade {
-  font-size: 12px;
-  font-weight: bold;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.prioridade-urgente {
-  color: red;
+.prioridade-ti {
+  background: #e3f2fd;
+  color: #1976d2;
 }
 
-.prioridade-médio {
-  color: green;
+.prioridade-adm {
+  background: #fff8e1;
+  color: #ff8f00;
 }
 
-.prioridade-alto {
-  color: orange;
+.card-chamado h3 {
+  margin: 0.5rem 0 1rem;
+  color: #333;
+}
+
+.card-chamado p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .usuario {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 0.8rem;
 }
 
 .perfil-img {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .estrela {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 20px;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #ffd700;
+  font-size: 1.2rem;
 }
 
-.estrela-green { color: green; }
-.estrela-blue { color: blue; }
-.estrela-red { color: red; }
-.estrela-gray { color: gray; }
+/* Responsividade */
+@media (max-width: 768px) {
+  .botoes-categorias {
+    flex-direction: column;
+  }
+  
+  .cards-chamados {
+    grid-template-columns: 1fr;
+  }
+}

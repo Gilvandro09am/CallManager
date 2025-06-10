@@ -12,7 +12,7 @@ function FormularioChamado() {
   const navigate = useNavigate();
 
   const handleCancel = () => {
-    navigate('/listar-chamados');
+    navigate('/meus-chamados');
   };
 
   /*const resetForm = () => {

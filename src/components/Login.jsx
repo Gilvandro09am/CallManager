@@ -8,32 +8,38 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await login({ email, password });
-      if (res.status === 200) {
-        // Você pode salvar o token, se necessário
-        localStorage.setItem('token', res.data.token);
-        localStorage.setItem('user', JSON.stringify(res.data.user)); 
-        navigate('/listar-chamados'); 
+  // Login.js - Modifique o handleLogin para salvar todos os dados
+const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await login({ email, password });
+    if (res.data.token) {
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('user', JSON.stringify(res.data.user));
+      
+      // Redireciona baseado no role
+      if (res.data.user.role === 'staff') {
+        navigate('/listar-chamados');
+      } else if (res.data.user.role === 'student') {
+        navigate('/meus-chamados');
       }
-    } catch (err) {
-      alert('Erro ao fazer login');
     }
-  };
+  } catch (err) {
+    alert('Erro ao fazer login');
+  }
+};
   
   return (
-   <div class="login-container">
-        <header class="login-header">
+   <div className="login-container">
+        <header className="login-header">
             <img src="Logocallm.png" alt="UEPB Call Manager" class="logo" />
             <h2>SISTEMA DE CHAMADOS</h2>
         </header>
         
-        <div class="login-box">
+        <div className="login-box">
             <h3>🔒 Login UEPB</h3>
             <form id="loginForm" onSubmit={handleLogin}>
-                <div class="form-group">
+                <div className="form-group">
                     <input 
                         type="email" 
                         value={email}
@@ -44,7 +50,7 @@ function Login() {
                     />
                 </div>
                 
-                <div class="form-group">
+                <div className="form-group">
                     <input 
                         type="password"
                         value={password}
@@ -60,7 +66,7 @@ function Login() {
                 </button>
             </form>
             
-            <a href="#" class="Cadastro">Cadastrar-se</a>
+            <a href="#" className="Cadastro">Cadastrar-se</a>
         </div>
     </div>
   );
