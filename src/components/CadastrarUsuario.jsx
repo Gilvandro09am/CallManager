@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import "./FormularioChamado.css";
 
-function FormularioChamado() {
+function CadastrarUsuario() {
   const [category, setCategory] = useState("TI");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -102,4 +102,4 @@ function FormularioChamado() {
   );
 }
 
-export default FormularioChamado;
+export default CadastrarUsuario;

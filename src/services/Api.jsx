@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 export const login = (data) => api.post('/auth/login', data);
-export const criarChamado = (data) => api.post('/chamados', data);
+export const criarChamado = (data) => api.post('/tickets/create-ticket', data);
 export const listarChamados = () => api.get('/tickets');
-export const listarUsuarios = () => api.get('/usuarios');
-export const atualizarChamado = (id, data) => api.put(`/chamados/${id}`, data);
+export const listarChamadosPorSetor = (sector) => api.get(`/tickets/sector?sector=${sector}`);
+export const listarMeusChamados = () => api.get('/tickets/mytickets');

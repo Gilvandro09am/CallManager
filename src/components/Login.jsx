@@ -15,7 +15,8 @@ function Login() {
       if (res.status === 200) {
         // Você pode salvar o token, se necessário
         localStorage.setItem('token', res.data.token);
-        navigate('/chamados');
+        localStorage.setItem('user', JSON.stringify(res.data.user)); 
+        navigate('/listar-chamados'); 
       }
     } catch (err) {
       alert('Erro ao fazer login');
@@ -23,23 +24,44 @@ function Login() {
   };
   
   return (
-    <div className="login-container">
-      <header className="login-header">
-        <img src="Logocallm.png" alt="UEPB Call Manager" className="logo" />
-        <h2>SISTEMA DE CHAMADOS</h2>
-      </header>
-
-      <div className="login-box">
-        <h3>🔒 Login UEPB</h3>
-
-         <form onSubmit={handleLogin}>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)}/>
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
-          <button type="submit">Entrar</button>
-         </form>
-
-        <a href="/" className="forgot-password">Esqueci minha Senha</a>
-      </div>
+   <div class="login-container">
+        <header class="login-header">
+            <img src="Logocallm.png" alt="UEPB Call Manager" class="logo" />
+            <h2>SISTEMA DE CHAMADOS</h2>
+        </header>
+        
+        <div class="login-box">
+            <h3>🔒 Login UEPB</h3>
+            <form id="loginForm" onSubmit={handleLogin}>
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        id="email" 
+                        placeholder="E-mail institucional"
+                        required
+                    />
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        id="password" 
+                        placeholder="Senha"
+                        required
+                    />
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    Entrar
+                </button>
+            </form>
+            
+            <a href="#" class="Cadastro">Cadastrar-se</a>
+        </div>
     </div>
   );
 }
